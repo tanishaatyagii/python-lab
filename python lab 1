@@ -1,0 +1,11 @@
+# Function to read and print variable values and their types
+def print_variable_info():
+    # Read integer input
+    int_value = int(input("Enter an integer: "))
+    print(f"Value: {int_value}, Type: {type(int_value)}")
+
+    # Read float input
+    float_value = float(input("Enter a float: "))
+    print(f"Value: {float_value}, Type: {type(float_value)}")
+
+    
