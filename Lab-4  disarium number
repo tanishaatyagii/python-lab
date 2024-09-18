@@ -1,0 +1,13 @@
+
+number = int(input("Enter a number: "))
+
+
+num_str = str(number)
+total_sum = 0
+for i in range(len(num_str)):
+    digit = int(num_str[i])
+    total_sum += digit ** (i + 1)  
+if total_sum == number:
+    print(f"{number} is a Disarium number.")
+else:
+    print(f"{number} is not a Disarium number.")
