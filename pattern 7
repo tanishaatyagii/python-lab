@@ -1,0 +1,11 @@
+def display_pattern(rows):
+    for i in range(1, rows + 1):
+        # Generate the increasing part of the row
+        increasing_part = list(range(i, i + i))
+        # Generate the decreasing part of the row
+        decreasing_part = list(range(i + i - 2, i - 1, -1))
+        # Combine both parts and convert to strings for printing
+        row = increasing_part + decreasing_part
+        print(" ".join(map(str, row)))
+rows = 5
+display_pattern(rows)
