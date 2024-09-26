@@ -1,0 +1,11 @@
+def display_pattern(rows):
+    for i in range(rows):
+        row = []
+        for j in range(2 * i + 1):
+            if j % 2 == 0:
+                row.append('1' if i % 2 == 0 else '0')
+            else:
+                row.append('0' if i % 2 == 0 else '1')
+        print(" ".join(row))
+rows = 4
+display_pattern(rows)
