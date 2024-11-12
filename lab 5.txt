@@ -1,0 +1,159 @@
+QUE 1."""Write a Python program to triple all numbers in a given list of integers. Use Python map."""
+def triple_numbers(numbers):
+    return list(map(lambda x: x * 3, numbers))
+
+numbers = [1, 2, 3, 4, 5]
+result = triple_numbers(numbers)
+print(result) 
+ # Output: [3, 6, 9, 12, 15]
+
+QUE 2.
+
+""" Write a Python program to add three given lists using Python map and lambda."""
+def add_lists(list1, list2, list3):
+    return list(map(lambda x, y, z: x + y + z, list1, list2, list3))
+
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+list3 = [7, 8, 9]
+result = add_lists(list1, list2, list3)
+print(result)  
+# Output: [12, 15, 18]
+
+QUE 3.
+
+"""Write a Python program to listify the list of given strings individually using Python map."""
+def listify_strings(strings):
+    return list(map(list, strings))
+
+strings = ["hello", "world"]
+result = listify_strings(strings)
+print(result)  
+# Output: [['h', 'e', 'l', 'l', 'o'], ['w', 'o', 'r', 'l', 'd']]
+
+
+QUE 4.
+
+"""Write a Python program to create a list containing the power of said number in bases raised to the corresponding number in the index using Python map."""
+def power_list(base, length):
+    return list(map(lambda x: base ** x, range(length)))
+
+base = 2
+length = 5
+result = power_list(base, length)
+print(result)  
+# Output: [1, 2, 4, 8, 16]
+
+
+QUE 5. 
+
+""Write a Python program to square the elements of a list using the map() function."""
+def square_elements(numbers):
+    return list(map(lambda x: x ** 2, numbers))
+
+numbers = [1, 2, 3, 4, 5]
+result = square_elements(numbers)
+print(result)  
+# Output: [1, 4, 9, 16, 25]
+
+que 6.
+
+"""Write a Python program to convert all the characters into uppercase and lowercase and
+eliminate duplicate letters from a given sequence. Use the map() function."""
+def eliminate_duplicates(sequence):
+    unique_chars = set(sequence)
+    upper_chars = list(map(str.upper, unique_chars))
+    lower_chars = list(map(str.lower, unique_chars))
+    return upper_chars, lower_chars
+
+sequence = "Hello World"
+result = eliminate_duplicates(sequence)
+print(result) 
+ # Output: (['H', 'E', 'O', 'L', 'R', 'W', 'D'], ['h', 'e', 'o', 'l', 'r', 'w', 'd'])
+
+
+que 7.
+
+
+"""Write a Python program to add two given lists and find the difference between them. Use the map() function."""
+def add_and_difference(list1, list2):
+    added = list(map(lambda x, y: x + y, list1, list2))
+    difference = list(map(lambda x, y: x - y, list1, list2))
+    return added, difference
+
+list1 = [5, 6, 7]
+list2 = [1, 2, 3]
+added, difference = add_and_difference(list1, list2)
+print("Added:", added)  
+# Output: [6, 8, 10]
+print("Difference:", difference)  
+# Output: [4, 4, 4]
+
+que 8.
+
+"""Write a Python program to convert a given list of integers and a tuple of integers in a list of strings."""
+def convert_to_strings(int_list, int_tuple):
+    return list(map(str, int_list)) + list(map(str, int_tuple))
+
+int_list = [1, 2, 3]
+int_tuple = (4, 5, 6)
+result = convert_to_strings(int_list, int_tuple)
+print(result)  
+# Output: ['1', '2', '3', '4', '5', '6']
+
+
+que 9.
+
+""Write a Python program to create a new list taking specific elements from a tuple and convert a string value to an integer."""
+def create_new_list(tuple_data, string_value):
+    return list(map(int, tuple_data)) + [int(string_value)]
+
+tuple_data = (1, 2, 3)
+string_value = "4"
+result = create_new_list(tuple_data, string_value)
+print(result)  
+# Output: [1, 2, 3, 4]
+
+que 10.
+
+"""Write a Python program to compute the square of the first N Fibonacci numbers, using the map function and generate a list of the numbers."""
+def fibonacci_squares(n):
+    def fib(n):
+        if n <= 0:
+            return 0
+        elif n == 1:
+            return 1
+        else:
+            return fib(n - 1) + fib(n - 2)
+
+    return list(map(lambda x: fib(x) ** 2, range(n)))
+
+N = 5
+result = fibonacci_squares(N)
+print(result)  
+# Output: [0, 1, 1, 4, 9]
+
+
+
+que 11.
+
+
+"""Write a Python program to compute the sum of elements of an array of integers. Use the map() function."""
+def sum_of_elements(numbers):
+    return sum(map(int, numbers))
+
+numbers = [1, 2, 3, 4, 5]
+result = sum_of_elements(numbers)
+print(result) 
+ # Output: 15
+
+
+
+
+
+
+
+
+
+
+
