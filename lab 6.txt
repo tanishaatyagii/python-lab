@@ -1,0 +1,127 @@
+que 1."""⁠Wapp to use various inbuilt fn of list"""
+def list_inbuilt_functions_demo():
+    
+    my_list = [5, 2, 9, 1, 5, 6]
+    print("Original List:", my_list)
+
+    my_list.append(7)
+    print("After Append (7):", my_list)
+
+    my_list.extend([8, 10])
+    print("After Extend ([8, 10]):", my_list)
+
+    
+    my_list.insert(2, 4)
+    print("After Insert (4 at index 2):", my_list)
+
+    my_list.remove(5)
+    print("After Remove (first occurrence of 5):", my_list)
+
+
+    popped_item = my_list.pop()
+    print("After Pop (removed item):", my_list)
+    print("Popped Item:", popped_item)
+
+    count_of_five = my_list.count(5)
+    print("Count of 5 in the list:", count_of_five)
+
+    my_list.sort()
+    print("After Sort:", my_list)
+
+    my_list.reverse()
+    print("After Reverse:", my_list)
+
+    index_of_one = my_list.index(1)
+    print("Index of 1 in the list:", index_of_one)
+
+    slice_of_list = my_list[1:4]
+    print("Slice of List (index 1 to 4):", slice_of_list)
+
+    length_of_list = len(my_list)
+    print("Length of the List:", length_of_list)
+
+
+list_inbuilt_functions_demo()
+
+
+
+
+que 2.
+
+"""Wapp to pass the list as an argument in the fn"""
+def process_list(input_list):
+    return [x * 2 for x in input_list]
+
+my_list = [1, 2, 3, 4]
+result = process_list(my_list)
+print(result)
+# Output: [2, 4, 6, 8]
+
+
+
+que 3. 
+
+
+"""Wapp to take variable length arguments in fn and perform cube of each elements """
+def cube_elements(*args):
+    return [x ** 3 for x in args]
+
+result = cube_elements(1, 2, 3, 4)
+print(result)
+# Output: [1, 8, 27, 64]
+
+
+
+que 4. 
+
+
+""Wapp for solving tower of Hanoi problem for n = 3 disk"""
+def tower_of_hanoi(n, source, target, auxiliary):
+    if n == 1:
+        print(f"Move disk 1 from {source} to {target}")
+        return
+    tower_of_hanoi(n - 1, source, auxiliary, target)
+    print(f"Move disk {n} from {source} to {target}")
+    tower_of_hanoi(n - 1, auxiliary, target, source)
+
+tower_of_hanoi(3, 'A', 'C', 'B')
+# Output:
+# Move disk 1 from A to C
+# Move disk 2 from A to B
+# Move disk 1 from C to B
+# Move disk 3 from A to C
+# Move disk 1 from B to A
+# Move disk 2 from B to C
+# Move disk 1 from A to C
+
+
+que 5.
+
+"""Wapp that accept string and calculate the number of uppercase and lowercase letters in the string """
+def count_case(string):
+    upper_count = sum(1 for c in string if c.isupper())
+    lower_count = sum(1 for c in string if c.islower())
+    print(f"Uppercase : {upper_count} , lowercase : {lower_count}")
+    return upper_count, lower_count
+    
+    
+
+result = count_case("Hello World!")
+print(result)
+# Output: Uppercase: 2, Lowercase: 8
+
+
+que 6
+
+
+"""Wapp to compute gcd of two numbers. Only use comments for showing output"""
+import math
+
+def compute_gcd(a, b):
+    return math.gcd(a, b)
+
+gcd_result = compute_gcd(60, 48)
+print(gcd_result)
+# Output: 12
+
+
